@@ -1,0 +1,80 @@
+html,
+body,
+.container {
+	font-family: Arial;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	background-color: burlywood;
+}
+
+/*styles the h2*/
+h2 {
+	background-color: lawngreen;
+	text-align: center;
+	margin-top: 0px;
+	padding: 2%;
+	margin-bottom: 0px;
+}
+
+.list-view > ul {
+	list-style-type:inherit;
+	padding-bottom:10%;
+	padding-left: 3px;
+}
+
+.main {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+/*moves its container to the right
+to make room for the filter*/
+.main.moveRight {
+	left: 200px;
+}
+
+/*added class to map rather than using id*/
+.map-canvas {
+	top: 40px;
+	bottom: 0px;
+	height: 100%;
+	left: 0px;
+	position: absolute;
+	right: 10px;
+}
+
+/*highlights the item being selcted*/
+.item:hover {
+	background-color:paleturquoise;
+}
+
+/*for the hamburger menu*/
+#menu > img {
+	padding-left: 0px;
+	width: 40px;
+	height: 40px;
+}
+
+nav {
+	width: 200px;
+	position: absolute;
+  /* This trasform moves the drawer off canvas. */
+	-webkit-transform: translate(-200px, 0);
+	transform: translate(-200px, 0);
+  /* Optionally, we animate the drawer. */
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+nav.open {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
